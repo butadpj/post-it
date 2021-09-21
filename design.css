@@ -309,7 +309,12 @@ body {
   }
 
   .area__close, .area__open {
-    display: none !important;
+    /* 
+      Override material icon .fas class 
+      which has higher specificity
+    */
+    display: none !important; 
+    
   }
 
   .nav__logo {
