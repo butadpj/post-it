@@ -12,38 +12,35 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <title>HTML/CSS</title>
+    <title>Post It</title>
   </head>
   <body>
     <div class="app">
-      <div class="nav-wrapper">
-        <div class="nav">
-          <div class="nav__logo">
-            Post It
-            <img
-              class="nav__logo__img"
-              src="https://img.icons8.com/external-vitaliy-gorbachev-fill-vitaly-gorbachev/60/000000/external-pen-back-to-school-vitaliy-gorbachev-fill-vitaly-gorbachev.png"
-            />
-          </div>
-          <div class="nav__links-wrapper">
-            <ul class="nav__links">
-              <a href="#hero"><li>Home</li></a>
-              <a href="#posts"><li>Posts</li></a>
-              <a href="#about"><li>About</li></a>
-              <a href="#contact"><li>Contact</li></a>
-            </ul>
-            <i class="fas fa-times nav__close"></i>
-          </div>
-          <i class="fas fa-bars nav__open"></i>
+      <div class="nav">
+        <div class="nav__logo hoverable">
+          Post It
+          <img
+            class="nav__logo__img"
+            src="https://img.icons8.com/external-vitaliy-gorbachev-fill-vitaly-gorbachev/60/000000/external-pen-back-to-school-vitaliy-gorbachev-fill-vitaly-gorbachev.png"
+          />
         </div>
+        <div class="nav__area">
+          <ul class="nav__links">
+            <a href="#hero"><li>Home</li></a>
+            <a href="#posts"><li>Posts</li></a>
+            <a href="#about"><li>About</li></a>
+            <a href="#contact"><li>Contact</li></a>
+          </ul>
+          <i class="fas fa-times area__close hoverable"></i>
+        </div>
+        <i class="fas fa-bars area__open hoverable"></i>
       </div>
+
       <section class="hero" id="hero">
         <!-- Hero Image -->
-        <img
-          class="hero__img"
-          src="https://images.unsplash.com/photo-1432821596592-e2c18b78144f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-        />
-        <main class="hero__main">
+        <img class="hero__img" src="post-it-cover.png" />
+
+        <div class="hero__main">
           <!-- Hero Text -->
           <h1 class="hero__text typewrite" data-word="WRITE, SHARE, & LEARN">
             <span></span>
@@ -51,36 +48,40 @@
           </h1>
 
           <!-- Hero Button -->
-          <button class="hero__button button button--outline">
+          <button class="hero__button button button--outline hoverable">
             Get Started
           </button>
-        </main>
+        </div>
       </section>
-      <hr />
-      <section class="posts" id="posts">
+
+      <section class="posts pad-section" id="posts">
         <h2 class="section__heading">Browse Posts</h2>
         <main class="posts__main">
           <div class="post">Post # 1</div>
           <div class="post">Post # 2</div>
           <div class="post">Post # 3</div>
-          <div class="post main">MAIN POST</div>
+          <div class="post post--main">MAIN POST</div>
           <div class="post">Post # 4</div>
           <div class="post">Post # 5</div>
           <div class="post">Post # 6</div>
         </main>
       </section>
-      <hr />
-      <section class="about" id="about">
+
+      <section class="about pad-section" id="about">
         <h2 class="section__heading">About Us</h2>
         <main class="about__main">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
           atque autem reprehenderit adipisci esse voluptatum reiciendis vero in
           rerum commodi nisi saepe alias incidunt minima molestiae, sunt, magni
-          odio. Dolores.
+          odio. Dolores. 
+          <br>
+          esse voluptatum reiciendis vero in rerum commodi nisi saepe alias incidunt 
+          minima molestiae, sunt, magni odio. Dolores. Lorem ipsum dolor sit amet 
+          consectetur dipisicing elit. Provident atque autem reprehenderit adipisci 
         </main>
       </section>
-      <hr />
-      <section class="contact" id="contact">
+
+      <section class="contact pad-section" id="contact">
         <h2 class="section__heading section__heading--left">Contact Us</h2>
         <main class="contact__main">
           <div class="address">123 Mayamot St.</div>
@@ -88,6 +89,7 @@
           <div class="email">postit@gmail.com</div>
         </main>
       </section>
+
       <section class="footer" id="footer">Post It © 2021</section>
     </div>
     <script src="./script.js"></script>
