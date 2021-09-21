@@ -1,37 +1,30 @@
-let typewrite = document.querySelector(".typewrite");
-let wrap = document.querySelector(".type-mark");
-let text = typewrite.dataset.word;
-let typeSpeed = 100;
+const typewrite = document.querySelector('.typewrite');
+const text = typewrite.dataset.word;
 let i = 0;
+
+const navArea = document.querySelector(".nav__area");
 
 const typeWriterEffect = () => {
   while (i < text.length) {
     typewrite.firstElementChild.innerHTML += text[i];
-    setTimeout(typeWriterEffect, typeSpeed);
+    setTimeout(typeWriterEffect, 100);
     i++;
-
     return;
   }
-  wrap.style.borderRight = "none";
 };
-
-let openNav = document.querySelector(".nav__open");
-let closeNav = document.querySelector(".nav__close");
-
-let navLinks = document.querySelector(".nav__links-wrapper");
 
 const navToggle = () => {
-  openNav.addEventListener("click", () => {
-    navLinks.classList.add("show");
+  document.querySelector('.area__open').addEventListener('click', () => {
+    navArea.classList.add('nav__area--show');
+    navArea.classList.remove('nav__area--hide');
   });
 
-  closeNav.addEventListener("click", () => {
-    navLinks.classList.remove("show");
+  document.querySelector('.area__close').addEventListener('click', () => {
+    navArea.classList.remove('nav__area--show');
+    navArea.classList.add('nav__area--hide');
   });
 };
 
-window.onload = () => {
-  typeWriterEffect();
+typeWriterEffect();
+navToggle();
 
-  navToggle();
-};
