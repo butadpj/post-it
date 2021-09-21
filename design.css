@@ -34,7 +34,6 @@ body {
 
 .button--outline:hover {
   background: black;
-  border: 3px solid black;
   color: white;
 }
 
